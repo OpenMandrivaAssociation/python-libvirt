@@ -1,3 +1,4 @@
+%define _disable_ld_no_undefined 1
 %define rname libvirt-python
 
 Summary:	The libvirt virtualization API python2 binding
