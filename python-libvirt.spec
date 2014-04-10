@@ -35,9 +35,9 @@ of recent versions of Linux (and other OSes).
 %setup -q -n %{rname}-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" %{__python} setup.py build
+CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python} setup.py build
 
-CFLAGS="$RPM_OPT_FLAGS" %{__python3} setup.py build
+CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python3} setup.py build
 
 %install
 %{__python} setup.py install --skip-build --root=%{buildroot}
@@ -48,19 +48,16 @@ rm -f %{buildroot}%{_libdir}/python*/site-packages/*egg-info
 
 %files
 %doc ChangeLog AUTHORS NEWS README COPYING COPYING.LESSER examples/
-%{_libdir}/python2*/site-packages/libvirt.py*
-%{_libdir}/python2*/site-packages/libvirt_qemu.py*
-%{_libdir}/python2*/site-packages/libvirt_lxc.py*
-%{_libdir}/python2*/site-packages/libvirtmod*
+%{python_sitearch}/libvirt.py*
+%{python_sitearch}/libvirt_qemu.py*
+%{python_sitearch}/libvirt_lxc.py*
+%{python_sitearch}/libvirtmod*
 
 %files -n python3-libvirt
 %doc ChangeLog AUTHORS NEWS README COPYING COPYING.LESSER examples/
-%{_libdir}/python3*/site-packages/libvirt.py*
-%{_libdir}/python3*/site-packages/libvirt_qemu.py*
-%{_libdir}/python3*/site-packages/libvirt_lxc.py*
-%{_libdir}/python3*/site-packages/__pycache__/libvirt.cpython-*.py*
-%{_libdir}/python3*/site-packages/__pycache__/libvirt_qemu.cpython-*.py*
-%{_libdir}/python3*/site-packages/__pycache__/libvirt_lxc.cpython-*.py*
-%{_libdir}/python3*/site-packages/libvirtmod*
+%{python3_sitearch}/libvirt.py*
+%{python3_sitearch}/libvirt_qemu.py*
+%{python3_sitearch}/libvirt_lxc.py*
+%{python3_sitearch}/libvirtmod*
 
 
