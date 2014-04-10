@@ -37,7 +37,7 @@ of recent versions of Linux (and other OSes).
 %build
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python} setup.py build
 
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python3} setup.py build
+CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lpython3.3 -lvirt" %{__python3} setup.py build
 
 %install
 %{__python} setup.py install --skip-build --root=%{buildroot}
