@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   libvirt-python-1.2.3.tar.gz: a97fe15f22f5dd9ca1d5ef48e6e5e302be372feb
+sources:
+  libvirt-python-1.2.9.tar.gz: bcc338662d86a17dd78fc6eeb74c5e0b8c42e826
