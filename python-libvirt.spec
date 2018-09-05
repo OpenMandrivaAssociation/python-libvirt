@@ -3,7 +3,7 @@
 
 Summary:	The libvirt virtualization API python2 binding
 Name:		python-libvirt
-Version:	1.2.15
+Version:	4.7.0
 Release:	2
 License:	LGPLv2+
 Group:		Development/Python
@@ -13,6 +13,7 @@ BuildRequires:	libvirt-devel >= 1.2.0
 BuildRequires:	libvirt-utils >= 1.2.0
 BuildRequires:	python2-devel
 BuildRequires:	python3-devel
+BuildRequires:	pkgconfig(dbus-1)
 
 %description
 The libvirt-python package contains a module that permits applications
