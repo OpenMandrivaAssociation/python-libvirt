@@ -13,7 +13,6 @@ BuildRequires:	libvirt-devel >= 1.2.0
 BuildRequires:	libvirt-utils >= 1.2.0
 BuildRequires:	python2-devel
 BuildRequires:	python3-devel
-BuildRequires:	pkgconfig(dbus-1)
 
 %description
 The libvirt-python package contains a module that permits applications
@@ -51,9 +50,11 @@ rm -Rf %{buildroot}%{python3_sitearch}/__pycache__
 %files
 %doc ChangeLog AUTHORS NEWS README COPYING COPYING.LESSER examples/
 %{python3_sitearch}/libvirt.py*
+%{python3_sitearch}/__pycache__/*
 %{python3_sitearch}/libvirt_qemu.py*
 %{python3_sitearch}/libvirt_lxc.py*
 %{python3_sitearch}/libvirtmod*
+%{python3_sitearch}/libvirtaio.py
 
 %files -n python2-libvirt
 %doc ChangeLog AUTHORS NEWS README COPYING COPYING.LESSER examples/
