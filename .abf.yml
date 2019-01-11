@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   libvirt-python-4.9.0.tar.gz: 829198b7d50de9e8e734941a61dd744a67b49709
+sources:
+  libvirt-python-4.10.0.tar.gz: 6f600034603411a2f79a03fbd320ba607002e15e

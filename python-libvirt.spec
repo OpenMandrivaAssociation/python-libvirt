@@ -3,12 +3,12 @@
 
 Summary:	The libvirt virtualization API python2 binding
 Name:		python-libvirt
-Version:	4.9.0
+Version:	4.10.0
 Release:	1
 License:	LGPLv2+
 Group:		Development/Python
 URL:		http://libvirt.org
-Source0:	http://libvirt.org/sources/python/%{rname}-%{version}.tar.gz
+Source0:	http://libvirt.org/sources/python/libvirt-python-%{version}.tar.gz
 BuildRequires:	libvirt-devel >= 1.2.0
 BuildRequires:	libvirt-utils >= 1.2.0
 BuildRequires:	python2-devel
@@ -35,32 +35,30 @@ of recent versions of Linux (and other OSes).
 %setup -q -n %{rname}-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python2} setup.py build
+CFLAGS="%{optflags}" LDFLAGS="-lvirt" python2} setup.py build
 
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python3} setup.py build
+CFLAGS="%{optflags}" LDFLAGS="-lvirt" python3} setup.py build
 
 %install
-%{__python} setup.py install --skip-build --root=%{buildroot}
+python setup.py install --skip-build --root=%{buildroot}
 
-%{__python2} setup.py install --skip-build --root=%{buildroot}
+python setup.py install --skip-build --root=%{buildroot}
 
 rm -f %{buildroot}%{_libdir}/python*/site-packages/*egg-info
-rm -Rf %{buildroot}%{python3_sitearch}/__pycache__
+rm -Rf %{buildroot}%{py3_platsitedir}/__pycache__
 
 %files
 %doc ChangeLog AUTHORS NEWS README COPYING COPYING.LESSER examples/
-%{python3_sitearch}/libvirt.py*
-%{python3_sitearch}/__pycache__/*
-%{python3_sitearch}/libvirt_qemu.py*
-%{python3_sitearch}/libvirt_lxc.py*
-%{python3_sitearch}/libvirtmod*
-%{python3_sitearch}/libvirtaio.py
+%{py3_platsitedir}/libvirt.py*
+%{py3_platsitedir}/__pycache__/*
+%{py3_platsitedir}/libvirt_qemu.py*
+%{py3_platsitedir}/libvirt_lxc.py*
+%{py3_platsitedir}/libvirtmod*
+%{py3_platsitedir}/libvirtaio.py
 
 %files -n python2-libvirt
 %doc ChangeLog AUTHORS NEWS README COPYING COPYING.LESSER examples/
-%{python2_sitearch}/libvirt.py*
-%{python2_sitearch}/libvirt_qemu.py*
-%{python2_sitearch}/libvirt_lxc.py*
-%{python2_sitearch}/libvirtmod*
-
-
+%{py_platsitedir}/libvirt.py*
+%{py_platsitedir}/libvirt_qemu.py*
+%{py_platsitedir}/libvirt_lxc.py*
+%{py_platsitedir}/libvirtmod*
