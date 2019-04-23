@@ -3,8 +3,8 @@
 
 Summary:	The libvirt virtualization API python binding
 Name:		python-libvirt
-Version:	4.9.0
-Release:	2
+Version:	5.2.0
+Release:	1
 License:	LGPLv2+
 Group:		Development/Python
 URL:		http://libvirt.org
@@ -35,9 +35,9 @@ of recent versions of Linux (and other OSes).
 %setup -q -n %{rname}-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python2} setup.py build
+CFLAGS="%{optflags}" LDFLAGS="-lvirt" %{__python2} setup.py build
 
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-lvirt" %{__python3} setup.py build
+CFLAGS="%{optflags}" LDFLAGS="-lvirt" %{__python3} setup.py build
 
 %install
 %{__python} setup.py install --skip-build --root=%{buildroot}
