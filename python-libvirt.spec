@@ -1,10 +1,10 @@
 %define _disable_ld_no_undefined 1
 %define rname libvirt-python
 
-Summary:	The libvirt virtualization API python2 binding
+Summary:	The libvirt virtualization API python binding
 Name:		python-libvirt
 Version:	4.9.0
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		Development/Python
 URL:		http://libvirt.org
