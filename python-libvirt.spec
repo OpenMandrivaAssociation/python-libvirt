@@ -35,7 +35,7 @@ rm -f %{buildroot}%{_libdir}/python*/site-packages/*egg-info
 rm -Rf %{buildroot}%{python3_sitearch}/__pycache__
 
 %files
-%doc ChangeLog AUTHORS NEWS README COPYING COPYING.LESSER examples/
+%doc ChangeLog AUTHORS README COPYING COPYING.LESSER examples/
 %{python_sitearch}/libvirt.py*
 %{python_sitearch}/__pycache__/*
 %{python_sitearch}/libvirt_qemu.py*
