@@ -3,7 +3,7 @@
 
 Summary:	The libvirt virtualization API python binding
 Name:		python-libvirt
-Version:	7.10.0
+Version:	8.2.0
 Release:	1
 License:	LGPLv2+
 Group:		Development/Python
@@ -37,7 +37,6 @@ rm -Rf %{buildroot}%{python3_sitearch}/__pycache__
 %files
 %doc ChangeLog AUTHORS README COPYING COPYING.LESSER examples/
 %{python_sitearch}/libvirt.py*
-%{python_sitearch}/__pycache__/*
 %{python_sitearch}/libvirt_qemu.py*
 %{python_sitearch}/libvirt_lxc.py*
 %{python_sitearch}/libvirtmod*
