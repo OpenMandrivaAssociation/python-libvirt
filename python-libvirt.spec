@@ -32,8 +32,8 @@ CFLAGS="%{optflags}" LDFLAGS="-lvirt" %{__python} setup.py build
 %install
 %{__python} setup.py install --skip-build --root=%{buildroot}
 
-rm -f %{buildroot}%{_libdir}/python*/site-packages/*egg-info
-rm -Rf %{buildroot}%{python3_sitearch}/__pycache__
+#rm -f %{buildroot}%{_libdir}/python*/site-packages/*egg-info
+#rm -Rf %{buildroot}%{python3_sitearch}/__pycache__
 
 %files
 %doc ChangeLog AUTHORS README COPYING COPYING.LESSER examples/
