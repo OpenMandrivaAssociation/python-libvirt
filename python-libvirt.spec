@@ -42,3 +42,4 @@ CFLAGS="%{optflags}" LDFLAGS="-lvirt" %{__python} setup.py build
 %{python_sitearch}/libvirt_lxc.py*
 %{python_sitearch}/libvirtmod*
 %{python_sitearch}/libvirtaio.py
+%{python_sitearch}/libvirt_python-%{version}-py*.*.egg-info/
