@@ -11,7 +11,8 @@ URL:		http://libvirt.org
 Source0:	http://libvirt.org/sources/python/%{rname}-%{version}.tar.gz
 BuildRequires:	libvirt-devel >= 1.2.0
 BuildRequires:	libvirt-utils >= 1.2.0
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(python)
+BuildRequires:  python3dist(setuptools)
 
 Obsoletes:    python2-libvirt
 
