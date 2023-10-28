@@ -36,7 +36,7 @@ CFLAGS="%{optflags}" LDFLAGS="-lvirt" %{__python} setup.py build
 #rm -Rf %{buildroot}%{python3_sitearch}/__pycache__
 
 %files
-%doc ChangeLog AUTHORS README COPYING COPYING.LESSER examples/
+%doc ChangeLog AUTHORS README COPYING examples/
 %{python_sitearch}/libvirt.py*
 %{python_sitearch}/libvirt_qemu.py*
 %{python_sitearch}/libvirt_lxc.py*
