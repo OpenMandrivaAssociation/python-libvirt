@@ -7,7 +7,7 @@ Version:	10.5.0
 Release:	1
 License:	LGPLv2+
 Group:		Development/Python
-URL:		http://libvirt.org
+URL:		https://libvirt.org
 Source0:	http://libvirt.org/sources/python/%{rname}-%{version}.tar.gz
 BuildRequires:	libvirt-devel >= 1.2.0
 BuildRequires:	libvirt-utils >= 1.2.0
