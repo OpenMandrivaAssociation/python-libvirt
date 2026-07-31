@@ -4,7 +4,7 @@
 
 Summary:	The libvirt virtualization API python binding
 Name:		python-libvirt
-Version:	11.10.0
+Version:	12.5.0
 Release:	1
 License:	LGPL-2.1-or-later
 Group:		Development/Python
@@ -28,7 +28,7 @@ supplied by the libvirt library to use the virtualization capabilities
 of recent versions of Linux (and other OSes).
 
 %prep
-%autosetup -n %{oname}-%{version} -p1
+%autosetup -n libvirt_python-12.5.0 -p1
 
 # Unset execute bit for example scripts; it can introduce spurious
 # RPM dependencies
