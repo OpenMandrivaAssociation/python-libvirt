@@ -5,7 +5,7 @@
 Summary:	The libvirt virtualization API python binding
 Name:		python-libvirt
 Version:	12.5.0
-Release:	1
+Release:	2
 License:	LGPL-2.1-or-later
 Group:		Development/Python
 URL:		https://libvirt.org
