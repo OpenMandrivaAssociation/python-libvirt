@@ -4,15 +4,15 @@
 
 Summary:	The libvirt virtualization API python binding
 Name:		python-libvirt
-Version:	12.5.0
-Release:	3
+Version:	12.9.0
+Release:	1
 License:	LGPL-2.1-or-later
 Group:		Development/Python
 URL:		https://libvirt.org
 Source0:	https://download.libvirt.org/python/%{oname}-%{version}.tar.gz
 BuildSystem:	python
-BuildRequires:	libvirt-devel >= 1.2.0
-BuildRequires:	libvirt-utils >= 1.2.0
+BuildRequires:	libvirt-devel >= %{version}
+BuildRequires:	libvirt-utils >= %{version}
 BuildRequires:	pkgconfig(python3)
 BuildRequires:  python%{pyver}dist(lxml)
 BuildRequires:	python%{pyver}dist(pip)
@@ -28,7 +28,7 @@ supplied by the libvirt library to use the virtualization capabilities
 of recent versions of Linux (and other OSes).
 
 %prep
-%autosetup -n libvirt_python-12.5.0 -p1
+%autosetup -n libvirt_python-%{version} -p1
 
 # Unset execute bit for example scripts; it can introduce spurious
 # RPM dependencies
